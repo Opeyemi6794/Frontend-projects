@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root {
+  --background-color: hsl(212, 45%, 89%);
+}
+
 body {
     background-color: white;
     font-family: 'outfit', sans-serif;
@@ -23,11 +27,11 @@ body {
 }
 
 .background-box {
-    background-color: hsl(212, 45%, 89%);
+    background-color: var(--background-color);
     border-radius: 20px;
     width: 90%;
-    max-width: 1100px;
-    padding: 80px 0;
+    max-width: 68.75em
+    padding-block: clamp(40px, 8vw, 80px) 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,9 +49,10 @@ body {
 
 .card img {
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-block-end: 15px;
     width: 100%;
 }
+
 
 .card h1 {
     color: hsl(218, 44%, 22%);
@@ -62,7 +67,7 @@ body {
 
 
 
-@media (max-width: 375px) {
+@media (max-width: 23.4375em) {
     .background-box {
         width: 95%;
         padding: 50px 0;
@@ -83,7 +88,7 @@ body {
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width: 68.75em) {
    .background-box {
     max-width: 1200px;
     padding: 100px 0;
